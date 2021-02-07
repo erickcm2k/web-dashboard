@@ -63,9 +63,9 @@ const TableFiller = ({ mode }) => {
     let url = "";
 
     if (mode === "CPU y memoria") {
-      url = "http://192.168.0.4:3000/cpumem/";
+      url = "http://localhost:3000/cpumem/";
     } else {
-      url = "http://192.168.0.4:3000/disk/";
+      url = "http://localhost:3000/disk/";
     }
     setError(false);
     setIsLoading(true);
@@ -109,15 +109,15 @@ const TableFiller = ({ mode }) => {
       }
 
       if (mode === "CPU y memoria") {
-        url = `http://192.168.0.4:3000/cpumem/interval/?initialDate=${firstDate}&finalDate=${secondDate}&initialHour=${firstHour}&finalHour=${secondHour}`;
+        url = `http://localhost:3000/cpumem/interval/?initialDate=${firstDate}&finalDate=${secondDate}&initialHour=${firstHour}&finalHour=${secondHour}`;
       } else {
-        url = `http://192.168.0.4:3000/disk/interval/?initialDate=${firstDate}&finalDate=${secondDate}&initialHour=${firstHour}&finalHour=${secondHour}`;
+        url = `http://localhost:3000/disk/interval/?initialDate=${firstDate}&finalDate=${secondDate}&initialHour=${firstHour}&finalHour=${secondHour}`;
       }
     } else {
       if (mode === "CPU y memoria") {
-        url = `http://192.168.0.4:3000/cpumem/interval/?initialDate=${firstDate}&finalDate=${secondDate}`;
+        url = `http://localhost:3000/cpumem/interval/?initialDate=${firstDate}&finalDate=${secondDate}`;
       } else {
-        url = `http://192.168.0.4:3000/disk/interval/?initialDate=${firstDate}&finalDate=${secondDate}`;
+        url = `http://localhost:3000/disk/interval/?initialDate=${firstDate}&finalDate=${secondDate}`;
       }
     }
     console.log(url);
